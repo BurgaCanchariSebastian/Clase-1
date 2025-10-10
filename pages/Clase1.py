@@ -35,11 +35,11 @@ anécdotas en el camino.
 Y esto es un poco de mi, espero que les haya gustado conocerme un poco más.
             '''),
         ], style={
-            'width': '75%',
+            'width': '70%',
             'display': 'inline-block',
             'verticalAlign': 'top',
             'paddingRight': '60px',
-            'fontSize': '20px',  # Aumenta el tamaño de la letra
+            'fontSize': '20px',  
             'lineHeight': '1',
         }),
 

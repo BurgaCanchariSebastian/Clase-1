@@ -67,12 +67,9 @@ fig.update_yaxes(
 )
 
 
-
-
-
 ################################################################################################################################
 
-dash.register_page(__name__, path='/pagina1', name='Página1'),
+dash.register_page(__name__, path='/pagina1', name='Página 1'),
 
 layout = html.Div(children=[
     # Contenedor Izquierdo
