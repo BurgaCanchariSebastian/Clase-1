@@ -5,6 +5,7 @@ body {
     background-color: rgb(171, 204, 248);
     margin: 5;
     padding: 0;
+    color: #000; /* texto por defecto en negro */
 }
 .app-container {
     padding: 0;
@@ -21,6 +22,14 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+}
+.btn-generar{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .nav-link{
     background-color: rgb(0, 0, 0);
@@ -42,16 +51,17 @@ a {
 }
 .page-container{
     background-color: rgb(255, 255, 255);
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 6px; /* reducir espacio izquierdo */
+    margin-right: 6px; /* reducir espacio derecho */
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 .content {
     background-color: rgb(189, 222, 255);
     border-radius: 8px;
-    padding: 10px;
+    padding: 8px; /* padding levemente reducido */
     box-shadow: 0 0 10px rgb(0, 0, 0);  
+    color: #000; /* asegurar texto legible dentro de los contenedores */
 }
 .content.left, 
 .content.right {
@@ -60,6 +70,7 @@ a {
 .title{
     text-align: center;
     margin-top: 0;
+    color: #000; /* títulos en negro */
 
 }
 
@@ -100,4 +111,102 @@ a {
 .rc-slider-mark-text {
     color: #000000; 
     font-weight: bold;
+}
+
+/* Inputs & layout spacing improvements */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;           /* espacio entre label y control */
+    margin-bottom: 14px;/* espacio entre grupos */
+    align-items: flex-start;
+}
+
+.input-group label {
+    font-weight: 600;
+    margin: 0; /* dejar el espaciado al gap del contenedor */
+}
+
+.input-field {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #cfcfcf;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 320px; /* evita controles muy anchos */
+}
+
+/* Separación extra y estilo del botón para que no quede pegado */
+.btn-generar {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Si quieres centrar el botón dentro de su columna */
+.content.left .btn-generar {
+    display: inline-block;
+}
+
+.examples-container {
+    margin-top: 18px;
+}
+
+/* COVID page styles */
+.covid-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.covid-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.covid-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.stat-card {
+    background-color: #ff5100de;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.stat-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 6px 0;
+    color: #333;
+}
+.stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #123;
+}
+
+.covid-graph-container {
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .covid-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+    .covid-stats-grid { grid-template-columns: 1fr; }
 }

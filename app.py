@@ -14,14 +14,14 @@ app = dash.Dash(
 )
 server = app.server
 
-ordered_names = ["Inicio", "Página 1", "Página 2"]
+ordered_names = ["Inicio", "Página 1", "Página 2", "Página 3"]
 pages = list(dash.page_registry.values())
 pages.sort(key=lambda p: ordered_names.index(p["name"]) if p["name"] in ordered_names else 99)
 
 app.layout = html.Div([
     dbc.Navbar(
         dbc.Container([
-            dbc.NavbarBrand("Técnicas de Modelamiento Matemático", className="fw-bold fs-3 text-white"),
+            dbc.NavbarBrand("Técnicas de Modelamiento", className="fw-bold fs-3 text-white"),
             dbc.Nav([dbc.NavItem(dbc.NavLink(p["name"], href=p["relative_path"], active="exact",
                                               className="text-white")) for p in pages],
                     pills=True, className="ms-auto")
